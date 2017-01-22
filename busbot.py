@@ -71,7 +71,7 @@ def get_next_bus_arrival(busStopCode):
                 #svcStr += ":x: _Not operating_ "
                 servicesNotOperating += [serviceNo]
             else:
-                svcStr = "Service **{}**: ".format(serviceNo)
+                svcStr = "Service **{}** - \t".format(serviceNo)
                 for b in ["NextBus", "SubsequentBus", "SubsequentBus3"]:
                     if x[b]["EstimatedArrival"] != "":
                         estArrival = calculate_time_left(x[b]["EstimatedArrival"])
